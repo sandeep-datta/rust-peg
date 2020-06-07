@@ -39,7 +39,7 @@ fn main() {
 
 	let source_tokens = source.parse().expect("Error tokenizing input");
 	let input_tokens = tokens::FlatTokenStream::new(source_tokens);
-    let grammar = match grammar::pegtastic::peg_grammar(&input_tokens) {
+    let grammar = match grammar::peg::peg_grammar(&input_tokens) {
         Ok(g) => g,
         Err(err) => {
             eprintln!("Failed to parse grammar: expected {}", err.expected);
