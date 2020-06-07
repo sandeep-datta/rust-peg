@@ -2,9 +2,9 @@
 members = ["./peg-macros", "./peg-runtime"]
 
 [package]
-name = "peg"
-version = "0.6.2"
-authors = [ "Kevin Mehall <km@kevinmehall.net>" ]
+name = "pegtastic"
+version = "0.1.0"
+authors = [ "Kevin Mehall <km@kevinmehall.net>", "Sandeep Datta <datta.sandeep@gmail.com>" ]
 license = "MIT"
 repository = "https://github.com/kevinmehall/rust-peg"
 documentation = "https://github.com/kevinmehall/rust-peg/blob/master/README.md#readme"
