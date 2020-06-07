@@ -22,7 +22,7 @@
 //! the input is matched to produce a value.
 //! 
 //! ```rust
-//! peg::parser!{
+//! pegtastic::parser!{
 //!   grammar list_parser() for str {
 //!     rule number() -> u32
 //!       = n:$(['0'..='9']+) { n.parse().unwrap() }
@@ -132,7 +132,7 @@
 //! algorithm.
 //!
 //! ```rust,no_run
-//! # peg::parser!{grammar doc() for str {
+//! # pegtastic::parser!{grammar doc() for str {
 //! # pub rule number() -> i64 = "..." { 0 }
 //! pub rule arithmetic() -> i64 = precedence!{
 //!   x:(@) "+" y:@ { x + y }
@@ -172,11 +172,11 @@
 //!   * `ParseLiteral` implements matching against a `"string"` literal.
 //!   * `ParseSlice` implements the `$()` operator, returning a slice from a span of indexes.
 //!
-//! As a more complex example, the body of the `peg::parser!{}` macro itself is
+//! As a more complex example, the body of the `pegtastic::parser!{}` macro itself is
 //! parsed with `peg`, using a [definition of these traits][gh-flat-token-tree]
 //! for a type that wraps Rust's `TokenTree`.
 //! 
-//! [gh-flat-token-tree]: https://github.com/kevinmehall/rust-peg/blob/master/peg-macros/tokens.rs
+//! [gh-flat-token-tree]: https://github.com/sandeep-datta/rust-peg/blob/master/peg-macros/tokens.rs
 //! 
 //! ## Error reporting
 //!
@@ -185,7 +185,7 @@
 //!
 //! Some rules should never appear in error messages, and can be suppressed with `quiet!{e}`:
 //! ```rust,no_run
-//! # peg::parser!{grammar doc() for str {
+//! # pegtastic::parser!{grammar doc() for str {
 //! rule whitespace() = quiet!{[' ' | '\n' | '\t']+}
 //! # }}
 //! # fn main() {}
@@ -195,7 +195,7 @@
 //! can use `quiet!{}` and `expected!()` together:
 //!
 //! ```rust,no_run
-//! # peg::parser!{grammar doc() for str {
+//! # pegtastic::parser!{grammar doc() for str {
 //! rule identifier()
 //!   = quiet!{[ 'a'..='z' | 'A'..='Z']['a'..='z' | 'A'..='Z' | '0'..='9' ]+}
 //!   / expected!("identifier")
@@ -210,7 +210,7 @@
 //!    pub struct Expr;
 //! }
 //!
-//! peg::parser!{grammar doc() for str {
+//! pegtastic::parser!{grammar doc() for str {
 //!     use self::ast::Expr;
 //! }}
 //! # fn main() {}
@@ -226,7 +226,7 @@
 //! module or function:
 //!
 //! ```rust,no_run
-//! # peg::parser!{grammar doc() for str {
+//! # pegtastic::parser!{grammar doc() for str {
 //! /// Parse an array expression.
 //! pub rule array() -> Vec<i32> = "[...]" { vec![] }
 //! # }}
@@ -272,8 +272,8 @@
 //! ...
 //! ```
 
-extern crate peg_macros;
-extern crate peg_runtime as runtime;
+extern crate pegtastic_macros;
+extern crate pegtastic_runtime as runtime;
 
-pub use peg_macros::parser;
+pub use pegtastic_macros::parser;
 pub use runtime::*;

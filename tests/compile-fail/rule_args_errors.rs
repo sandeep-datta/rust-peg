@@ -1,6 +1,6 @@
-extern crate peg;
+extern crate pegtastic;
 
-peg::parser!(grammar foo() for str {
+pegtastic::parser!(grammar foo() for str {
     rule foo(x: i32, y: rule<()>) = "foo"
     rule ok() = foo(1, <[_]>) 
 

@@ -1,6 +1,6 @@
-extern crate peg;
+extern crate pegtastic;
 
-peg::parser!(grammar test_grammar() for str {
+pegtastic::parser!(grammar test_grammar() for str {
     pub rule boundaries() -> String
         = n:$("foo") { n.to_string() }
 });

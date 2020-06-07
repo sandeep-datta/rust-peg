@@ -1,5 +1,5 @@
-extern crate peg;
-use peg::parser;
+extern crate pegtastic;
+use pegtastic::parser;
 
 #[derive(Clone, PartialEq, Eq, Debug)]
 pub enum Expression {

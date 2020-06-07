@@ -1,11 +1,11 @@
 #![feature(test, crate_visibility_modifier)]
-extern crate peg;
+extern crate pegtastic;
 
 extern crate test;
 
 use test::Bencher;
 
-peg::parser!(grammar parser() for str {
+pegtastic::parser!(grammar parser() for str {
 crate rule expr() = eq()
 
 #[cache]

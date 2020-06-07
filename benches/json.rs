@@ -1,11 +1,11 @@
 #![feature(test)]
-extern crate peg;
+extern crate pegtastic;
 
 extern crate test;
 
 use test::Bencher;
 
-peg::parser!(grammar parser() for str {
+pegtastic::parser!(grammar parser() for str {
 // JSON grammar (RFC 4627). Note that this only checks for valid JSON and does not build a syntax
 // tree.
 

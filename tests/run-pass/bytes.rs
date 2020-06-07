@@ -1,5 +1,5 @@
-extern crate peg;
-use peg::parser;
+extern crate pegtastic;
+use pegtastic::parser;
 
 parser!{
     grammar byteparser() for [u8] {

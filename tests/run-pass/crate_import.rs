@@ -1,6 +1,6 @@
-extern crate peg;
+extern crate pegtastic;
 
-peg::parser!{
+pegtastic::parser!{
     pub grammar foo_parser() for str {
         use crate::types::Foo;
 

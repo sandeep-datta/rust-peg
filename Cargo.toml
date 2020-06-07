@@ -6,8 +6,8 @@ name = "pegtastic"
 version = "0.1.0"
 authors = [ "Kevin Mehall <km@kevinmehall.net>", "Sandeep Datta <datta.sandeep@gmail.com>" ]
 license = "MIT"
-repository = "https://github.com/kevinmehall/rust-peg"
-documentation = "https://github.com/kevinmehall/rust-peg/blob/master/README.md#readme"
+repository = "https://github.com/sandeep-datta/rust-peg"
+documentation = "https://github.com/sandeep-datta/rust-peg/blob/master/README.md#readme"
 description = "A simple Parsing Expression Grammar (PEG) parser generator."
 keywords = ["peg", "parser", "parsing", "grammar"]
 categories = ["parsing"]
@@ -15,8 +15,8 @@ readme = "README.md"
 edition = "2018"
 
 [dependencies]
-peg-macros = { path = "./peg-macros", version = "= 0.6.2" }
-peg-runtime = { path = "./peg-runtime", version = "= 0.6.2" }
+pegtastic-macros = { path = "./peg-macros", version = "= 0.1.0" }
+pegtastic-runtime = { path = "./peg-runtime", version = "= 0.1.0" }
 
 [dev-dependencies]
 trybuild = "1.0"
@@ -27,4 +27,4 @@ path = "tests/trybuild.rs"
 harness = false
 
 [features]
-trace = ["peg-macros/trace"]
+trace = ["pegtastic-macros/trace"]

@@ -1,7 +1,7 @@
-extern crate peg;
+extern crate pegtastic;
 use std::collections::HashMap;
 
-peg::parser!( grammar keyval() for str {
+pegtastic::parser!( grammar keyval() for str {
     rule number() -> i64
         = n:$(['0'..='9']+) { n.parse().unwrap() }
 

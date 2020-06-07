@@ -1,9 +1,9 @@
-extern crate peg;
+extern crate pegtastic;
 
 struct X;
 struct Y;
 
-peg::parser!(grammar foo() for str {
+pegtastic::parser!(grammar foo() for str {
     rule foo() -> X = "a" { Y } //~ ERROR
 });
 

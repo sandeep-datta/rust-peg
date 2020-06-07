@@ -1,6 +1,6 @@
-extern crate peg;
+extern crate pegtastic;
 
-peg::parser!( grammar lookahead() for str {
+pegtastic::parser!( grammar lookahead() for str {
     pub rule consonants()
         = (!['a'|'e'|'i'|'o'|'u']['a'..='z'])+
 

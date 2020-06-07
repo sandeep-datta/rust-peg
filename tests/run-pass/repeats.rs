@@ -1,6 +1,6 @@
-extern crate peg;
+extern crate pegtastic;
 
-peg::parser!( grammar repeats() for str {
+pegtastic::parser!( grammar repeats() for str {
     rule number() -> i64
         = n:$(['0'..='9']+) { n.parse().unwrap() }
 

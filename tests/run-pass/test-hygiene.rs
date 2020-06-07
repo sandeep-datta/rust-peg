@@ -1,4 +1,4 @@
-use ::peg as realpeg;
+use ::pegtastic as realpeg;
 struct Result;
 struct ParseResult;
 struct Parse;
@@ -7,7 +7,7 @@ struct ParseState;
 struct ErrorState;
 struct Vec;
 struct HashMap;
-mod peg {}
+mod pegtastic {}
 
 realpeg::parser!{
     grammar p() for str {

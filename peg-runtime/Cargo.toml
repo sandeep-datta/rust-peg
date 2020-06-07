@@ -1,9 +1,9 @@
 [package]
-name = "peg-runtime"
-version = "0.6.2"
-authors = [ "Kevin Mehall <km@kevinmehall.net>" ]
+name = "pegtastic-runtime"
+version = "0.1.0"
+authors = [ "Kevin Mehall <km@kevinmehall.net>", "Sandeep Datta <datta.sandeep@gmail.com>" ]
 license = "MIT"
-repository = "https://github.com/kevinmehall/rust-peg"
+repository = "https://github.com/sandeep-datta/rust-peg"
 description = "Runtime support for rust-peg grammars. To use rust-peg, see the `peg` crate."
 edition = "2018"
 

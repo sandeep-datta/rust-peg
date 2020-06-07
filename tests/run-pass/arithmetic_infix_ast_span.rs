@@ -1,6 +1,6 @@
-extern crate peg;
+extern crate pegtastic;
 
-peg::parser!( grammar arithmetic() for str {
+pegtastic::parser!( grammar arithmetic() for str {
     rule ident() -> &'input str = $(['a'..='z']+)
 
     pub rule expression() -> Node = precedence!{

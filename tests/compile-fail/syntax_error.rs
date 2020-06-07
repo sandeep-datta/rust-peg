@@ -1,6 +1,6 @@
-extern crate peg;
+extern crate pegtastic;
 
-peg::parser!(grammar foo() for str {
+pegtastic::parser!(grammar foo() for str {
     fn asdf() {} //~ ERROR expected one of "#", "crate", "pub", "rule", "use", "}"
 });
 

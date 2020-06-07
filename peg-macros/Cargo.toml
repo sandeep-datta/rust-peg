@@ -1,27 +1,27 @@
 [package]
-name = "peg-macros"
-version = "0.6.2"
-authors = [ "Kevin Mehall <km@kevinmehall.net>" ]
+name = "pegtastic-macros"
+version = "0.1.0"
+authors = [ "Kevin Mehall <km@kevinmehall.net>", "Sandeep Datta <datta.sandeep@gmail.com>" ]
 license = "MIT"
-repository = "https://github.com/kevinmehall/rust-peg"
+repository = "https://github.com/sandeep-datta/rust-peg"
 description = "Procedural macros for rust-peg. To use rust-peg, see the `peg` crate."
 edition = "2018"
 
 [dependencies]
 quote = "1.0"
 proc-macro2 = "1.0"
-peg-runtime = { version = "= 0.6.2", path = "../peg-runtime" }
+pegtastic-runtime = { version = "= 0.1.0", path = "../peg-runtime" }
 
 [features]
 trace = []
 
 [lib]
 proc-macro = true
-name = "peg_macros"
+name = "pegtastic_macros"
 path = "lib.rs"
 
 [[bin]]
-name = "rust-peg"
+name = "pegtastic"
 path = "bin.rs"
 test = false
 bench = false

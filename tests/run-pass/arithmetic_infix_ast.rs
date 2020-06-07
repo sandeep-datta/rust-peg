@@ -1,6 +1,6 @@
-extern crate peg;
+extern crate pegtastic;
 
-peg::parser!( grammar arithmetic() for str {
+pegtastic::parser!( grammar arithmetic() for str {
     rule ident() -> &'input str = $(['a'..='z']+)
     rule haskell_op() -> String = "`" i:ident() "`" [' '|'\n']* { i.to_owned() }
     rule plus() = "+" [' '|'\n']*

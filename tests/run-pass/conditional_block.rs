@@ -1,6 +1,6 @@
-extern crate peg;
+extern crate pegtastic;
 
-peg::parser!( grammar parse() for str {
+pegtastic::parser!( grammar parse() for str {
 
     pub rule dec_byte() -> u8
         = match_str:$(['0'..='9']*<,3>) {?

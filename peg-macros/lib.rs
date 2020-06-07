@@ -6,7 +6,7 @@ use quote::quote_spanned;
 
 // This can't use the `peg` crate as it would be a circular dependency, but the generated code in grammar.rs
 // requires `::peg` paths.
-extern crate peg_runtime as peg;
+extern crate pegtastic_runtime as peg;
 
 mod ast;
 mod tokens;
