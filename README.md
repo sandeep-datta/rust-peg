@@ -2,7 +2,7 @@
 
 [Documentation](https://docs.rs/peg) | [Release Notes](https://github.com/kevinmehall/rust-peg/releases)
 
-`pegtastic` is an experimental fork of `rust-peg`. This fork is not ready for general consumption yet.
+`pegtastic` is an experimental third party fork of `rust-peg`. This fork is not ready for general consumption yet.
 
 `rust-peg` is a simple yet flexible parser generator based on the [Parsing Expression Grammar](https://en.wikipedia.org/wiki/Parsing_expression_grammar) formalism. It provides a Rust macro that builds a recursive descent parser from a concise definition of the grammar.
 
